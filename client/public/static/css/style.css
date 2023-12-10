@@ -1,0 +1,30 @@
+p {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  width: 100%; /* 테이블 전체 너비 사용 */
+}
+table tr {
+  text-align: center;
+}
+
+.table-header {
+  background-color: #35363a;
+  color: white;
+}
+
+.table-header td {
+  height: 50px;
+  border-bottom: 2px solid #35363a;
+}
+
+.table-body td {
+  border: 1px solid #35363a;
+  padding: 8px;
+}
+
+

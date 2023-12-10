@@ -1,4 +1,5 @@
-/node_modules/
-/csv
+node_modules/
+/server/db
 *package-lock.json
 *package.json
+*CRM.db
