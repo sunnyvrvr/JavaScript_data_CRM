@@ -7,7 +7,6 @@ node_modules/
 
 
 .DS_Store
-client/.DS_Store
-client/public/.DS_Store
-server/.DS_Store
-server/src/.DS_Store
+._.DS_Store
+**/.DS_Store
+**/._.DS_Store

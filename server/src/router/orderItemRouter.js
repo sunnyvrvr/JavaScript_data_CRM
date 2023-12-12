@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const mainController = require('../controller/mainController');
+const orderItemController = require('../controller/orderItemController');
 
-// /api/users 경로에 대한 GET 요청 처리를 userController로 연결
-router.get('/api/orderitems', mainController.orderItems);
+// /api/users 경로에 대한 GET 요청 처리를 orderitemController로 연결
+router.get('/api/orderitems', orderItemController.orderItems);
 
 module.exports = router;

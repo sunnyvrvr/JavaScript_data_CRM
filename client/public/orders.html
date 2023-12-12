@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/static/css/style.css">
+    <script src="/public/static/js/orders.js"></script>
+    <title>Orders</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/users" class="href">사용자</a></li>
+            <li><a href="/stores" class="href">매장</a></li>
+            <li><a href="/orders" class="href">주문</a></li>
+            <li><a href="/orderitems" class="href">주문상품</a></li>
+        </ul>
+    </nav>
+    <div>
+        <p>주문</p>
+    </div>
+    <table id="orderTable">
+        <thead class="table-header">
+            <tr>
+                <td>Id</td>
+                <td>OrderAt</td>
+                <td>StoreId</td>
+                <td>UserId</td>
+            </tr>
+        </thead>
+        <tbody id="orderTableBody" class="table-body">
+        </tbody>
+    </table>
+</body>
+</html>

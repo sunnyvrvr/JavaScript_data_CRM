@@ -1,8 +1,6 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
-
 const cors = require('cors');
-
 const path = require('path');
 
 const app = express();
@@ -13,10 +11,9 @@ const SUCCESS = 200;
 const SERVER_ERROR = 500;
 const NOT_FOUND= 404;
 
-app.set('view engine', 'html');
+// app.set('view engine', 'html');
 const dbPath = require('path').resolve(__dirname, './src/model/CRM.db');
 const db = new sqlite3.Database(dbPath);
-
 
 //라우터 연결
 const userRouter = require('./src/router/userRouter');
@@ -31,19 +28,22 @@ app.use('/api/stores', storeRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/orderitems', orderItemRouter);
 
-// 수정된 정적 파일 제공 코드
-app.use(express.static(path.join(__dirname, '../client/public')));
+app.use(express.static(path.join(__dirname, '../client')));
 
-// 프론트엔드로의 리다이렉션
-app.get("/users", (req, res) => {
-    res.redirect('/');
-});
-
-// 기존의 라우팅 코드
 app.get('/users', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/public/users.html'));
 });
+app.get('/stores', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/stores.html'));
+});
+app.get('/orders', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/orders.html'));
+});
+app.get('/orderitems', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/public/orderitems.html'));
+});
 
+// REST API 엔드포인트 - 사용자 정보 가져오기
 app.get("/api/users", (req, res) => {
     const pageTitle = "사용자";
     const sql = "SELECT * FROM user";

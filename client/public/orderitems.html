@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/static/css/style.css">
+    <script src="/public/static/js/orderitems.js"></script>
+    <title>OrderItmes</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/users" class="href">사용자</a></li>
+            <li><a href="/stores" class="href">매장</a></li>
+            <li><a href="/orders" class="href">주문</a></li>
+            <li><a href="/orderitems" class="href">주문상품</a></li>
+        </ul>
+    </nav>
+    <div>
+        <p>주문 상품</p>
+    </div>
+    <table id="orderItemTable">
+        <thead class="table-header">
+            <tr>
+                <td>Id</td>
+                <td>OrderId</td>
+                <td>ItemId</td>
+            </tr>
+        </thead>
+        <tbody id="orderItemTableBody" class="table-body">
+        </tbody>
+    </table>
+</body>
+</html>
